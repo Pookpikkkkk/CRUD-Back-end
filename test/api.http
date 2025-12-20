@@ -1,0 +1,182 @@
+# ###
+# Get http://localhost:3000/api/users
+# ###
+
+# Get http://localhost:3000/api/users/10
+
+# ###
+# Get http://localhost:3000/api/users/5
+# ###
+# POST http://localhost:3000/api/users
+
+# {
+#     "name" : "Pookpik"
+# }
+# ###
+
+
+# GET http://localhost:3000/api/products
+# ###
+
+# Get http://localhost:3000/api/products/1
+# ###
+
+# POST http://localhost:3000/api/products
+
+# {
+#     "name" : "Pookpik"
+# }
+
+# ###
+
+# PUT http://localhost:3000/api/products/1
+
+# {
+#     "name" : "products1"
+# }
+# ###
+
+# DELETE  http://localhost:3000/api/products/1
+
+### 
+
+# GET http://localhost:3000/api/users
+
+# ###
+
+# GET http://localhost:3000/api/roles
+# ###
+
+# GET http://localhost:3000/api/users/10
+# ###
+
+# POST http://localhost:3000/api/users
+# Conternt-Type: application/json
+
+# {
+#     "name" : "Pookpik",
+#     "email": "pookpik@gmail.com"
+# }
+# ###
+
+# POST http://localhost:3000/api/users
+# Conternt-Type: application/json
+
+# {
+#     "name" : "Pookpik",
+#     "email": "pookpik@doe"
+# }
+# ###
+
+# POST http://localhost:3000/api/users
+# Conternt-Type: application/json
+
+# {
+#     "name" : "Pookpik",
+#     "email": "pookpik@doe",
+#     "phone": "1234567890"
+# }
+# ###
+
+# POst http://localhost:3000/api/products
+# Content-Type: application/json
+
+# {
+#     "ID_Product": 78945,
+#     "Name" : "Milk",
+#     "sellprice" : "1.50",
+#     "costprice" : "1.00",
+#     "note" : "Fresh milk"
+# }
+# ###
+
+# POst http://localhost:3000/api/products
+# Content-Type: application/json
+
+# {
+#     "ID_Product": 78945,
+#     "Name" : "Milk",
+#     "sellprice" : 1.50,
+#     "costprice" : 1.00,
+#     "note" : "Fresh milk"
+# }
+# ###
+
+GET http://localhost:3000/api/users
+###
+
+GET http://localhost:3000/api/users/10
+###
+
+//User ที่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username" : "User01",
+    "password" : "user1234",
+    "firstname" : "user01firstname",
+    "lastname" : "user01lastname"
+}
+
+//user ทีไม่่ถูกต้อง
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username": "user1234",
+    "firstname": "user01firstname",
+    "lastname": "user01lastname"
+}
+###
+
+//user ใหม่ที่ถูกต้อง
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username" : "User05",
+    "password" : "user1234",
+    "firstname" : "user01firstname",
+    "lastname" : "user01lastname"
+}
+
+###
+GET http://localhost:3000/api/roles
+
+###
+
+GET http://localhost:3000/api/roles/2
+
+###
+GET http://localhost:3000/api/roles/999
+
+###
+// สร้าง role ใหม่ที่ถูกต้อง
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name" : "manager"
+}
+
+###
+// สร้าง role ใหม่ที่ไม่ถูกต้อง
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name" : "22"
+}
+
+###
+PUT http://localhost:3000/api/roles/6
+
+{
+    "name" : "admin"
+}
+###
+DELETE http://localhost:3000/api/roles/6
+
+###
